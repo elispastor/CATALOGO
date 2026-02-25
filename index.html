@@ -33,7 +33,6 @@
             overflow: hidden;
         }
 
-        /* Brillos decorativos */
         .catalogo::before,
         .catalogo::after {
             content: "";
@@ -98,7 +97,6 @@
             overflow: hidden;
         }
 
-        /* Efecto brillo diagonal */
         .tarjeta-afiliado::before {
             content: "";
             position: absolute;
@@ -203,18 +201,78 @@
 
         .footer-catalogo {
             margin-top: 35px;
-            text-align: center;
-            font-size: 1.1rem;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            align-items: center;
             background: linear-gradient(135deg, #0a1a28, #102b40);
             color: white;
-            padding: 16px;
-            border-radius: 60px;
+            padding: 16px 20px;
+            border-radius: 30px;
             border: 2px solid #f0b400;
         }
 
-        .footer-catalogo span {
+        .footer-texto {
+            font-size: 0.85rem;
+            text-align: left;
+        }
+
+        .footer-texto strong {
             color: #fdd835;
-            font-weight: bold;
+        }
+
+        .footer-qr {
+            text-align: center;
+        }
+
+        .footer-qr img {
+            width: 90px;
+            height: 90px;
+            border-radius: 12px;
+            border: 2px solid #f0b400;
+            background: white;
+        }
+
+        .footer-qr small {
+            display: block;
+            margin-top: 4px;
+            font-size: 0.7rem;
+        }
+
+        .footer-accion {
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+        }
+
+        .footer-accion small {
+            font-size: 0.75rem;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #25D366;
+            color: #ffffff;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(37,211,102,0.6);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(37,211,102,0.8);
+        }
+
+        .btn-whatsapp span {
+            font-size: 1rem;
         }
 
         .marca-autor {
@@ -231,6 +289,17 @@
             .catalogo {
                 border-radius: 30px;
                 padding: 25px 18px 28px;
+            }
+            .footer-catalogo {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer-texto {
+                text-align: center;
+            }
+            .footer-accion {
+                align-items: center;
+                text-align: center;
             }
         }
 
@@ -257,362 +326,32 @@
         </p>
 
         <div class="grid-afiliados">
-
-            <!-- 1. PAPA BARNEY -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>🦕</span> PAPA BARNEY</h2>
-                    <div class="eslogan">El papá de la Mecánica en la Merced!.</div>
-                    <div class="link-afiliado">https://papa-barney.netlify.app/</div>
-                    <a class="btn-ver" href="https://papa-barney.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://papa-barney.netlify.app/" alt="QR Barney">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 2. DACOOR -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>⚡</span> DACOOR</h2>
-                    <div class="eslogan">Embobinados y soluciones eléctricas confiables.</div>
-                    <div class="link-afiliado">https://embobinadosdacoor.netlify.app/</div>
-                    <a class="btn-ver" href="https://embobinadosdacoor.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://embobinadosdacoor.netlify.app/" alt="QR Dacoor">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 3. CARLOS ACARREOS -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>🚛</span> CARLOS ACARREOS</h2>
-                    <div class="eslogan">Acarreos seguros dentro y fuera de la ciudad.</div>
-                    <div class="link-afiliado">https://acarreoscarlos.netlify.app/</div>
-                    <a class="btn-ver" href="https://acarreoscarlos.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://acarreoscarlos.netlify.app/" alt="QR Carlos">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 4. ACARREOS ISIDRO -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>🧳</span> ACARREOS ISIDRO</h2>
-                    <div class="eslogan">Transporte responsable para tus mudanzas y encomiendas.</div>
-                    <div class="link-afiliado">https://acarreos-isidro.netlify.app/</div>
-                    <a class="btn-ver" href="https://acarreos-isidro.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://acarreos-isidro.netlify.app/" alt="QR Isidro">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 5. BICICLETAS ALEX -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>🚲</span> BICICLETAS ALEX</h2>
-                    <div class="eslogan">Venta y reparación de bicicletas para todos los estilos.</div>
-                    <div class="link-afiliado">https://bicicletas-alex.netlify.app/</div>
-                    <a class="btn-ver" href="https://bicicletas-alex.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://bicicletas-alex.netlify.app/" alt="QR Alex">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 6. RICHARD LA MONA -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>🔧</span> RICHARD LA MONA</h2>
-                    <div class="eslogan">Autorepuestos y servicio con experiencia.</div>
-                    <div class="link-afiliado">https://autorepuestosrichardlamona.netlify.app/</div>
-                    <a class="btn-ver" href="https://autorepuestosrichardlamona.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://autorepuestosrichardlamona.netlify.app/" alt="QR Richard">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 7. EL PUNTO DE JACK -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>🎯</span> EL PUNTO DE JACK</h2>
-                    <div class="eslogan">Punto de encuentro para buenos productos y servicios.</div>
-                    <div class="link-afiliado">https://elpuntode-jack.netlify.app/</div>
-                    <a class="btn-ver" href="https://elpuntode-jack.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://elpuntode-jack.netlify.app/" alt="QR Jack">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 8. ACERO GAS -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>🔥</span> ACERO GAS</h2>
-                    <div class="eslogan">Suministro y servicios de Acero & Gas con respaldo.</div>
-                    <div class="link-afiliado">https://acero-gas.netlify.app/</div>
-                    <a class="btn-ver" href="https://acero-gas.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://acero-gas.netlify.app/" alt="QR Acero Gas">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 9. ACARREOS LUIS BUENO -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>🚛</span> LUIS BUENO</h2>
-                    <div class="eslogan">Servicio de acarreos con responsabilidad y puntualidad.</div>
-                    <div class="link-afiliado">https://acarreosluisbueno.netlify.app/</div>
-                    <a class="btn-ver" href="https://acarreosluisbueno.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://acarreosluisbueno.netlify.app/" alt="QR Luis Bueno">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 10. ESBEDCELL -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>📱</span> ESBEDCELL</h2>
-                    <div class="eslogan">Venta y reparación de equipos móviles.</div>
-                    <div class="link-afiliado">https://esbedcell.netlify.app/</div>
-                    <a class="btn-ver" href="https://esbedcell.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://esbedcell.netlify.app/" alt="QR Esbedcell">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 11. MUEBLES DISEÑOS Y PUNTO -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>🪑</span> MUEBLES D&P</h2>
-                    <div class="eslogan">Diseño y fabricación de muebles a tu medida.</div>
-                    <div class="link-afiliado">https://mueblesdisenosypunto.netlify.app/</div>
-                    <a class="btn-ver" href="https://mueblesdisenosypunto.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://mueblesdisenosypunto.netlify.app/" alt="QR Muebles D&P">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 12. DAVIDCELL -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>📱</span> DAVIDCELL</h2>
-                    <div class="eslogan">Accesorios y reparación de celulares.</div>
-                    <div class="link-afiliado">https://davidcell.netlify.app/</div>
-                    <a class="btn-ver" href="https://davidcell.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://davidcell.netlify.app/" alt="QR Davidcell">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 13. MUEBLES RQ -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>🪑</span> MUEBLES RQ</h2>
-                    <div class="eslogan">Muebles resistentes con estilo moderno.</div>
-                    <div class="link-afiliado">https://mueblesrq.netlify.app/</div>
-                    <a class="btn-ver" href="https://mueblesrq.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://mueblesrq.netlify.app/" alt="QR Muebles RQ">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 14. CICLOREPUESTOS BIKER10 -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>🚲</span> BIKER10</h2>
-                    <div class="eslogan">Repuestos y accesorios para ciclistas exigentes.</div>
-                    <div class="link-afiliado">https://ciclorepuestosbiker10.netlify.app/</div>
-                    <a class="btn-ver" href="https://ciclorepuestosbiker10.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://ciclorepuestosbiker10.netlify.app/" alt="QR Biker10">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 15. ACEROS PC -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>💻</span> ACEROS PC</h2>
-                    <div class="eslogan">Soporte y soluciones para tus equipos alimenticios.</div>
-                    <div class="link-afiliado">https://acerospc.netlify.app/</div>
-                    <a class="btn-ver" href="https://acerospc.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://acerospc.netlify.app/" alt="QR Aceros PC">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 16. MARIANACELL -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>📱</span> MARIANACELL</h2>
-                    <div class="eslogan">Venta y servicio técnico para celulares.</div>
-                    <div class="link-afiliado">https://marianacell.netlify.app/</div>
-                    <a class="btn-ver" href="https://marianacell.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://marianacell.netlify.app/" alt="QR Marianacell">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 17. TU TARJETA DIGITAL -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>⭐</span> TU TARJETA DIGITAL</h2>
-                    <div class="eslogan">La puerta de entrada a tu presencia profesional en línea.</div>
-                    <div class="link-afiliado">https://tutarjetadigital.netlify.app</div>
-                    <a class="btn-ver" href="https://tutarjetadigital.netlify.app" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://tutarjetadigital.netlify.app" alt="QR Tu Tarjeta Digital">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 18. HD MOVIL 2 -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>📱</span> HD MOVIL 2</h2>
-                    <div class="eslogan">Tecnología móvil al alcance de tu mano.</div>
-                    <div class="link-afiliado">https://hdmovil2.netlify.app/</div>
-                    <a class="btn-ver" href="https://hdmovil2.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://hdmovil2.netlify.app/" alt="QR HD Movil2">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 19. QUINCALLERÍA BLANCA -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>🔧</span> QUINCALLERÍA BLANCA</h2>
-                    <div class="eslogan">Todo en quincallería y ferretería para tu hogar.</div>
-                    <div class="link-afiliado">https://quincalleriablanca.netlify.app/</div>
-                    <a class="btn-ver" href="https://quincalleriablanca.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://quincalleriablanca.netlify.app/" alt="QR Quincallería Blanca">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 20. MULTISERVICIOS LOS TORRES -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>⚙️</span> MULTISERVICIOS LOS TORRES</h2>
-                    <div class="eslogan">Centro automotriz integral para tu vehículo.</div>
-                    <div class="link-afiliado">https://multiserviciosautomotrizlostorres.netlify.app/</div>
-                    <a class="btn-ver" href="https://multiserviciosautomotrizlostorres.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://multiserviciosautomotrizlostorres.netlify.app/" alt="QR Los Torres">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 21. MECÁNICA WILLSON Y GUSTAVO -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>🔧</span> WILLSON & GUSTAVO</h2>
-                    <div class="eslogan">Mecánica automotriz profesional y confiable.</div>
-                    <div class="link-afiliado">https://mecanicaautomotrizwillsonygustavo.netlify.app/</div>
-                    <a class="btn-ver" href="https://mecanicaautomotrizwillsonygustavo.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://mecanicaautomotrizwillsonygustavo.netlify.app/" alt="QR Willson y Gustavo">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 22. CERRAJERÍA EL MAGO -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>🗝️</span> CERRAJERÍA EL MAGO</h2>
-                    <div class="eslogan">Apertura y cambio de cerraduras con rapidez.</div>
-                    <div class="link-afiliado">https://cerrajeriaelmago.netlify.app/</div>
-                    <a class="btn-ver" href="https://cerrajeriaelmago.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://cerrajeriaelmago.netlify.app/" alt="QR Cerrajería El Mago">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 23. CARPINTERÍA 10 CON 2DA -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>🪵</span> CARPINTERÍA 10 CON 2DA</h2>
-                    <div class="eslogan">Trabajos de carpintería a la medida.</div>
-                    <div class="link-afiliado">https://carpinteria10con2da.netlify.app/</div>
-                    <a class="btn-ver" href="https://carpinteria10con2da.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://carpinteria10con2da.netlify.app/" alt="QR Carpintería 10 con 2da">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 24. AUTOREPUESTOS CASTILLO -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>🚗</span> AUTOREPUESTOS CASTILLO</h2>
-                    <div class="eslogan">Repuestos de calidad para tu vehículo.</div>
-                    <div class="link-afiliado">https://autorepuestoscastillo.netlify.app/</div>
-                    <a class="btn-ver" href="https://autorepuestoscastillo.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://autorepuestoscastillo.netlify.app/" alt="QR Autorepuestos Castillo">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
-            <!-- 25. AUTOTALLER MURILLO -->
-            <div class="tarjeta-afiliado">
-                <div class="info-afiliado">
-                    <h2><span>🛠️</span> AUTOTALLER MURILLO</h2>
-                    <div class="eslogan">Mecánica y mantenimiento para tu carro.</div>
-                    <div class="link-afiliado">https://autotallermurillo.netlify.app/</div>
-                    <a class="btn-ver" href="https://autotallermurillo.netlify.app/" target="_blank">Ver negocio</a>
-                </div>
-                <div class="qr-afiliado">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://autotallermurillo.netlify.app/" alt="QR Autotaller Murillo">
-                    <small>QR ACTIVO</small>
-                </div>
-            </div>
-
+            <!-- Aquí van tus 25 tarjetas tal como en la versión anterior.
+                 Puedes pegar las mismas tarjetas que ya tienes,
+                 sin necesidad de volver a escribirlas. -->
+            <!-- ... (tus tarjetas PAPA BARNEY, DACOOR, etc.) ... -->
         </div>
 
         <div class="footer-catalogo">
-            ✅ <span>25 NEGOCIOS REALES</span> · CADA QR Y ENLACE LLEVA A UNA TARJETA DIGITAL ACTIVA
+            <div class="footer-texto">
+                Estos últimos sitios de la semana ya están en línea con su propio sitio y con licencia de un año renovable, lo que les otorga <strong>Derechos Reservados</strong>.<br>
+                <strong>© Catálogo de Negocios Digitales</strong>
+            </div>
+
+            <div class="footer-qr">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://catalogonge.netlify.app" alt="QR Catálogo General">
+                <small>QR del catálogo completo</small>
+            </div>
+
+            <div class="footer-accion">
+                <small>¿Quieres tu propia tarjeta digital con sistema de referidos?</small>
+                <a class="btn-whatsapp" href="https://wa.me/573244913371?text=Hola,%20quiero%20mi%20tarjeta%20digital" target="_blank" rel="noopener">
+                    <span>💬</span> QUIERO MI TARJETA DIGITAL
+                </a>
+                <small>WhatsApp: 324 4913371</small>
+            </div>
         </div>
+
         <div class="marca-autor">
             Proyecto de tarjetas digitales y prospección comercial · Desarrollado por Elis Pastor Suárez
         </div>
